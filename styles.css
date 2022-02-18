@@ -60,6 +60,8 @@
 
 table {
   font-family: serif;
+  table-layout: auto;
+  width: 100%;
 }
 
 thead,
@@ -70,12 +72,4 @@ th {
 
 tr:nth-child(odd) {
   background-color: lightgray;
-}
-
-.time-width {
-  width: 70%;
-}
-
-.desc-width {
-  width: 90%;
 }

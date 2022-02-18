@@ -6,6 +6,7 @@ var $submitButton = document.querySelector('.add-entry-submit');
 var $modalContainer = document.querySelector('.modal-container');
 var $modalOverlay = document.querySelector('.modal-overlay');
 var $addEntryForm = document.querySelector('#add-entry-form');
+// var $calendar = document.querySelector('.calendar');
 
 var formBoolean = false;
 
@@ -34,3 +35,9 @@ function clickSubmit(event) {
 
 $addEntry.addEventListener('click', clickAddEntry);
 $submitButton.addEventListener('click', clickSubmit);
+
+// function handleCalendarViewSwap(event) {
+
+// }
+
+// $calendar.addEventListener('click', handleCalendarViewSwap);
