@@ -7,6 +7,7 @@ var $modalContainer = document.querySelector('.modal-container');
 var $modalOverlay = document.querySelector('.modal-overlay');
 var $addEntryForm = document.querySelector('#add-entry-form');
 // var $calendar = document.querySelector('.calendar');
+// var $daysBox = document.querySelectorAll('.days-box');
 
 var formBoolean = false;
 
@@ -37,7 +38,14 @@ $addEntry.addEventListener('click', clickAddEntry);
 $submitButton.addEventListener('click', clickSubmit);
 
 // function handleCalendarViewSwap(event) {
+//   if (!event.target.matches('.days-box')) {
+//     return;
+//   }
 
+//   for (var i = 0; i < $daysBox.length; i++) {
+//     if (event.target.textContent === $daysBox[i].textContent) {
+//     }
+//   }
 // }
 
 // $calendar.addEventListener('click', handleCalendarViewSwap);
