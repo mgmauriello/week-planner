@@ -57,3 +57,25 @@
   border: 1px solid;
   padding: 1rem;
 }
+
+table {
+  font-family: serif;
+}
+
+thead,
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.time-width {
+  width: 70%;
+}
+
+.desc-width {
+  width: 90%;
+}
