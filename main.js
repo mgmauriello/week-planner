@@ -15,7 +15,6 @@ function clickAddEntry(event) {
     $modalOverlay.className = 'modal-overlay';
     formBoolean = true;
   }
-
 }
 
 function clickSubmit(event) {
@@ -28,6 +27,9 @@ function clickSubmit(event) {
   obj.entryId = data.nextEntryId;
   data.nextEntryId++;
   data.entries.unshift(obj);
+  $modalContainer.className = 'modal-container hidden';
+  $modalOverlay.className = 'modal-overlay hidden';
+  $addEntryForm.reset();
 }
 
 $addEntry.addEventListener('click', clickAddEntry);

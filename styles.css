@@ -48,3 +48,12 @@
 .placeholder-height {
   height: 200px;
 }
+
+.calendar {
+  justify-content: space-between;
+}
+
+.days-box {
+  border: 1px solid;
+  padding: 1rem;
+}
