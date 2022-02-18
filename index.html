@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="reset.css">
 </head>
 
-<body>
+<body class="modal-overlay">
   <header class="center">
     <div class="container">
       <div class="row">
@@ -29,32 +29,34 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container modal-overlay">
     <div class="row add-entry-form">
       <div class="column-full hidden">
-        <h1 class="center">Add Entry</h1>
-        <form action="index.html">
-          <!-- <input class="week" type="week"> -->
-          <select name="day-of-week" id="">
-            <option value="">Day of the Week</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-          </select>
-          <input type="time" class="time-area" min="">
-          <div class="row">
-            <div class="column-full center">
-              <textarea class="description-text" rows="10" cols="30" placeholder="description"></textarea>
+        <div class="modal">
+          <h1 class="center">Add Entry</h1>
+          <form action="index.html">
+            <!-- <input class="week" type="week"> -->
+            <select name="day-of-week" id="">
+              <option value="">Day of the Week</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+            <input type="time" class="time-area" min="">
+            <div class="row">
+              <div class="column-full center">
+                <textarea class="description-text" rows="10" cols="30" placeholder="description"></textarea>
+              </div>
             </div>
-          </div>
-          <div class="column-full flex-end">
-            <input type="submit" class="submit center">
-          </div>
-        </form>
+            <div class="column-full flex-end">
+              <input type="submit" class="submit center">
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
