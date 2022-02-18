@@ -21,16 +21,18 @@
     </div>
   </header>
 
-  <div class="container center">
+  <div class="container">
     <div class="row">
-      <div class="column-full">
+      <div class="column-full center">
         <button class="add-entry">Add Entry</button>
       </div>
     </div>
+  </div>
 
+  <div class="container">
     <div class="row add-entry-form">
       <div class="column-full hidden">
-        <h1>Add Entry</h1>
+        <h1 class="center">Add Entry</h1>
         <form action="index.html">
           <!-- <input class="week" type="week"> -->
           <select name="day-of-week" id="">
@@ -43,19 +45,19 @@
             <option value="Saturday">Saturday</option>
             <option value="Sunday">Sunday</option>
           </select>
-
-          <input type="time" min="">
-          <textarea class="text" rows="10" cols="30" placeholder="description"></textarea>
-          <input type="submit" class="submit">
-
+          <input type="time" class="time-area" min="">
+          <div class="row">
+            <div class="column-full center">
+              <textarea class="description-text" rows="10" cols="30" placeholder="description"></textarea>
+            </div>
+          </div>
+          <div class="column-full flex-end">
+            <input type="submit" class="submit center">
+          </div>
         </form>
       </div>
-
     </div>
-
-
   </div>
-
 
   <script src="main.js"></script>
 </body>
