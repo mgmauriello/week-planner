@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="reset.css">
 </head>
+
 <body>
   <header class="center">
     <div class="container">
@@ -27,22 +29,27 @@
     </div>
 
     <div class="row add-entry-form">
-      <form action="index.html">
-        <!-- <input class="week" type="week"> -->
-        <select name="day-of-week" id="">
-          <option value="">Day of the Week</option>
-          <option value="Monday">Monday</option>
-          <option value="Tuesday">Tuesday</option>
-          <option value="Wednesday">Wednesday</option>
-          <option value="Thursday">Thursday</option>
-          <option value="Friday">Friday</option>
-          <option value="Saturday">Saturday</option>
-          <option value="Sunday">Sunday</option>
-        </select>
+      <div class="column-full hidden">
+        <h1>Add Entry</h1>
+        <form action="index.html">
+          <!-- <input class="week" type="week"> -->
+          <select name="day-of-week" id="">
+            <option value="">Day of the Week</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
 
-        <input type="time" min="">
+          <input type="time" min="">
+          <textarea class="text" rows="10" cols="30" placeholder="description"></textarea>
+          <input type="submit" class="submit">
 
-      </form>
+        </form>
+      </div>
 
     </div>
 
@@ -52,4 +59,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
