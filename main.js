@@ -1,3 +1,6 @@
+/* global data */
+/* exported data */
+
 var $addEntry = document.querySelector('.add-entry');
 var $submitButton = document.querySelector('.add-entry-submit');
 var $modalContainer = document.querySelector('.modal-container');
@@ -22,6 +25,9 @@ function clickSubmit(event) {
   obj.day = $addEntryForm.elements['day-of-week'].value;
   obj.time = $addEntryForm.elements.time.value;
   obj.description = $addEntryForm.elements.description.value;
+  obj.entryId = data.nextEntryId;
+  data.nextEntryId++;
+  data.entries.unshift(obj);
 }
 
 $addEntry.addEventListener('click', clickAddEntry);
