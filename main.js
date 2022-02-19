@@ -9,7 +9,7 @@ var $addEntryForm = document.querySelector('#add-entry-form');
 var $calendar = document.querySelector('.calendar');
 var $daysBox = document.querySelectorAll('.days-box');
 var $scheduleHead = document.querySelector('.schedule-head');
-var $table = document.querySelector('table');
+var $table = document.querySelector('.table-class');
 
 var formBoolean = false;
 
@@ -44,9 +44,13 @@ function handleCalendarViewSwap(event) {
   if (!event.target.matches('.days-box')) {
     return;
   }
+  // console.log('test');
 
   for (var i = 0; i < $daysBox.length; i++) {
-    if (event.target.textContent === $daysBox[i].textContent) {
+    if (event.target.textContent === data.entries.day) {
+      console.log('Monday?');
+      var renderDayInfo = renderTable();
+      $table.appendChild(renderDayInfo);
 
     }
   }
@@ -68,14 +72,14 @@ function renderTable() {
   return $tableBody;
 }
 
-window.addEventListener('DOMContentLoaded', function (event) {
-  for (var i = 0; i < data.entries.length; i++) {
-    if (event.target.value === data.entries.day) {
-      // var entriesData = renderTable(data.entries[i]);
-      // $table.appendChild(entriesData);
-      console.log;
-    }
-  }
-});
+// window.addEventListener('DOMContentLoaded', function (event) {
+//   for (var i = 0; i < data.entries.length; i++) {
+//     if (event.target.value === data.entries.day) {
+//       var entriesData = renderTable(data.entries[i]);
+//       $table.appendChild(entriesData);
+//       console.log('hello');
+//     }
+//   }
+// });
 
 $calendar.addEventListener('click', handleCalendarViewSwap);

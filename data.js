@@ -2,9 +2,9 @@
 
 var data = {
   view: 'add-entry-form',
-  entries: [],
+  entries: [{ day: 'Monday', time: '10:00AM', description: 'hello', entryId: 1 }, { day: 'Monday', time: '09:00AM', description: 'hello00', entryID: 2 }],
   editing: null,
-  nextEntryId: 1
+  nextEntryId: 3
 };
 
 var previousData = localStorage.getItem('plan-local-storage');
