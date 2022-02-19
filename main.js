@@ -46,6 +46,7 @@ function handleCalendarViewSwap(event) {
 
   for (var i = 0; i < $daysBox.length; i++) {
     if (event.target.textContent === $daysBox[i].textContent) {
+
     }
   }
 }
@@ -60,6 +61,9 @@ function renderTable() {
   $tableBody.appendChild($tableRow);
   $tableRow.appendChild($tableDataTime);
   $tableRow.appendChild($tableDataDescription);
+  $tableDataTime.textContent = '10:00AM';
+  $tableDataDescription.textContent = 'welcome back jeffi';
+
   return $tableBody;
 }
 
