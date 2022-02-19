@@ -47,7 +47,7 @@ function handleCalendarViewSwap(event) {
   // console.log('test');
 
   for (var i = 0; i < $daysBox.length; i++) {
-    if (event.target.textContent === data.entries.day) {
+    if (event.target.textContent === data.entries[i].day) {
       console.log('Monday?');
       var renderDayInfo = renderTable();
       $table.appendChild(renderDayInfo);
@@ -66,20 +66,20 @@ function renderTable() {
   $tableBody.appendChild($tableRow);
   $tableRow.appendChild($tableDataTime);
   $tableRow.appendChild($tableDataDescription);
-  $tableDataTime.textContent = '10:00';
+  $tableDataTime.textContent = data.entries.time;
   $tableDataDescription.textContent = 'welcome back jeffi';
 
   return $tableBody;
 }
 
-// window.addEventListener('DOMContentLoaded', function (event) {
-//   for (var i = 0; i < data.entries.length; i++) {
-//     if (event.target.value === data.entries.day) {
-//       var entriesData = renderTable(data.entries[i]);
-//       $table.appendChild(entriesData);
-//       console.log('hello');
-//     }
-//   }
-// });
+window.addEventListener('DOMContentLoaded', function (event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    if (data.entries[i].day === 'Monday') {
+      var entriesData = renderTable(data.entries[i]);
+      $table.appendChild(entriesData);
+      console.log('hello');
+    }
+  }
+});
 
 $calendar.addEventListener('click', handleCalendarViewSwap);
