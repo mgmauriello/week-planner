@@ -34,6 +34,7 @@ function clickSubmit(event) {
   $modalContainer.className = 'modal-container hidden';
   $modalOverlay.className = 'modal-overlay hidden';
   $addEntryForm.reset();
+  formBoolean = false;
 }
 
 $addEntry.addEventListener('click', clickAddEntry);
@@ -61,7 +62,7 @@ function renderTable() {
   $tableBody.appendChild($tableRow);
   $tableRow.appendChild($tableDataTime);
   $tableRow.appendChild($tableDataDescription);
-  $tableDataTime.textContent = '10:00AM';
+  $tableDataTime.textContent = '10:00';
   $tableDataDescription.textContent = 'welcome back jeffi';
 
   return $tableBody;
@@ -69,8 +70,11 @@ function renderTable() {
 
 window.addEventListener('DOMContentLoaded', function (event) {
   for (var i = 0; i < data.entries.length; i++) {
-    var entriesData = renderTable(data.entries[i]);
-    $table.appendChild(entriesData);
+    if (event.target.value === data.entries.day) {
+      // var entriesData = renderTable(data.entries[i]);
+      // $table.appendChild(entriesData);
+      console.log;
+    }
   }
 });
 
