@@ -44,11 +44,10 @@ function handleCalendarViewSwap(event) {
   if (!event.target.matches('.days-box')) {
     return;
   }
-  // console.log('test');
 
   for (var i = 0; i < $daysBox.length; i++) {
     if (event.target.textContent === data.entries[i].day) {
-      console.log('Monday?');
+      console.log('test');
       var renderDayInfo = renderTable();
       $table.appendChild(renderDayInfo);
 
@@ -56,7 +55,7 @@ function handleCalendarViewSwap(event) {
   }
 }
 
-function renderTable() {
+function renderTable(journalEntries) {
   var $tableBody = document.querySelector('tbody');
   var $tableRow = document.createElement('tr');
   var $tableDataTime = document.createElement('td');
@@ -66,8 +65,9 @@ function renderTable() {
   $tableBody.appendChild($tableRow);
   $tableRow.appendChild($tableDataTime);
   $tableRow.appendChild($tableDataDescription);
-  $tableDataTime.textContent = data.entries.time;
-  $tableDataDescription.textContent = 'welcome back jeffi';
+
+  $tableDataTime.textContent = journalEntries.time;
+  $tableDataDescription.textContent = journalEntries.description;
 
   return $tableBody;
 }
