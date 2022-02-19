@@ -6,8 +6,10 @@ var $submitButton = document.querySelector('.add-entry-submit');
 var $modalContainer = document.querySelector('.modal-container');
 var $modalOverlay = document.querySelector('.modal-overlay');
 var $addEntryForm = document.querySelector('#add-entry-form');
-// var $calendar = document.querySelector('.calendar');
-// var $daysBox = document.querySelectorAll('.days-box');
+var $calendar = document.querySelector('.calendar');
+var $daysBox = document.querySelectorAll('.days-box');
+var $scheduleHead = document.querySelector('.schedule-head');
+var $table = document.querySelector('table');
 
 var formBoolean = false;
 
@@ -37,15 +39,35 @@ function clickSubmit(event) {
 $addEntry.addEventListener('click', clickAddEntry);
 $submitButton.addEventListener('click', clickSubmit);
 
-// function handleCalendarViewSwap(event) {
-//   if (!event.target.matches('.days-box')) {
-//     return;
-//   }
+function handleCalendarViewSwap(event) {
+  if (!event.target.matches('.days-box')) {
+    return;
+  }
 
-//   for (var i = 0; i < $daysBox.length; i++) {
-//     if (event.target.textContent === $daysBox[i].textContent) {
-//     }
-//   }
-// }
+  for (var i = 0; i < $daysBox.length; i++) {
+    if (event.target.textContent === $daysBox[i].textContent) {
+    }
+  }
+}
 
-// $calendar.addEventListener('click', handleCalendarViewSwap);
+function renderTable() {
+  var $tableBody = document.querySelector('tbody');
+  var $tableRow = document.createElement('tr');
+  var $tableDataTime = document.createElement('td');
+  var $tableDataDescription = document.createElement('td');
+
+  $table.appendChild($tableBody);
+  $tableBody.appendChild($tableRow);
+  $tableRow.appendChild($tableDataTime);
+  $tableRow.appendChild($tableDataDescription);
+  return $tableBody;
+}
+
+window.addEventListener('DOMContentLoaded', function (event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    var entriesData = renderTable(data.entries[i]);
+    $table.appendChild(entriesData);
+  }
+});
+
+$calendar.addEventListener('click', handleCalendarViewSwap);
