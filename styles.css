@@ -73,3 +73,10 @@ th {
 tr:nth-child(odd) {
   background-color: lightgray;
 }
+
+.add-entry {
+  background-color: mediumspringgreen;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}

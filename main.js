@@ -45,7 +45,7 @@ function handleCalendarViewSwap(event) {
     return;
   }
 
-  for (var i = 0; i < $daysBox.length; i++) {
+  for (var i = 0; i < data.entries.length; i++) {
     if (event.target.textContent === data.entries[i].day) {
       console.log('test');
       var renderDayInfo = renderTable();
